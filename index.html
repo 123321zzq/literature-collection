@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>???? · ????</title>
+  <title>&#25903;&#25794;&#26448;&#26009; &#183; &#25991;&#29486;&#21512;&#38598;</title>
   <style>
     :root {
       --bg: #f8fafc;
@@ -15,9 +15,7 @@
       --border: #e2e8f0;
       --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.04);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
         "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
@@ -26,17 +24,14 @@
       line-height: 1.6;
       min-height: 100vh;
     }
-
     header {
       background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
       color: #fff;
       padding: 3rem 1.5rem 2.5rem;
       text-align: center;
     }
-
     header h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: .5rem; }
     header p { opacity: .85; font-size: .95rem; }
-
     .badge {
       display: inline-block;
       margin-top: 1rem;
@@ -46,69 +41,34 @@
       padding: .25rem .85rem;
       font-size: .8rem;
     }
-
-    main {
-      max-width: 820px;
-      margin: -1.5rem auto 3rem;
-      padding: 0 1.25rem;
-    }
-
+    main { max-width: 820px; margin: -1.5rem auto 3rem; padding: 0 1.25rem; }
     .list { display: flex; flex-direction: column; gap: .75rem; }
-
     .paper {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.15rem 1.25rem;
-      box-shadow: var(--shadow);
-      transition: transform .15s, box-shadow .15s;
-      text-decoration: none;
-      color: inherit;
+      display: flex; align-items: flex-start; gap: 1rem;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.15rem 1.25rem;
+      box-shadow: var(--shadow); transition: transform .15s, box-shadow .15s;
+      text-decoration: none; color: inherit;
     }
-
     .paper:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 16px rgba(37,99,235,.12);
       border-color: #bfdbfe;
     }
-
     .num {
-      flex-shrink: 0;
-      width: 2rem;
-      height: 2rem;
-      background: #eff6ff;
-      color: var(--accent);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: .85rem;
+      flex-shrink: 0; width: 2rem; height: 2rem;
+      background: #eff6ff; color: var(--accent); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: .85rem;
     }
-
     .info { flex: 1; min-width: 0; }
     .title { font-weight: 600; font-size: .95rem; line-height: 1.45; margin-bottom: .35rem; }
     .meta { font-size: .78rem; color: var(--muted); }
-
     .action {
-      flex-shrink: 0;
-      align-self: center;
-      color: var(--accent);
-      font-size: .8rem;
-      font-weight: 600;
-      white-space: nowrap;
+      flex-shrink: 0; align-self: center; color: var(--accent);
+      font-size: .8rem; font-weight: 600; white-space: nowrap;
     }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: var(--muted);
-      font-size: .78rem;
-    }
-
+    footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: .78rem; }
     @media (max-width: 600px) {
       header h1 { font-size: 1.4rem; }
       .paper { flex-wrap: wrap; }
@@ -118,19 +78,14 @@
 </head>
 <body>
   <header>
-    <h1>???? · ????</h1>
-    <p>?????????????? PDF</p>
+    <h1>&#25903;&#25794;&#26448;&#26009; &#183; &#25991;&#29486;&#21512;&#38598;</h1>
+    <p>&#28857;&#20987;&#19979;&#26041;&#25991;&#31456;&#26631;&#39064;&#21363;&#21487;&#22312;&#32447;&#38405;&#35835; PDF</p>
     <span class="badge" id="count"></span>
   </header>
-
-  <main>
-    <div class="list" id="paper-list"></div>
-  </main>
-
-  <footer>????????</footer>
-
+  <main><div class="list" id="paper-list"></div></main>
+  <footer>&#20165;&#20379;&#23398;&#26415;&#20132;&#27969;&#20351;&#29992;</footer>
   <script>
-    const papers = [
+    var papers = [
       { title: "A foundation model for the Earth system", file: "A foundation model for the Earth system.pdf" },
       { title: "A physics-informed generative adversarial network for advancing solutions in ocean acoustics", file: "A physics-informed generative adversarial network for advancing solutions in ocean acoustics.pdf" },
       { title: "A Self-Evolving AI Agent System for Climate Science", file: "A Self-Evolving AI Agent System for Climate Science.pdf" },
@@ -142,23 +97,15 @@
       { title: "Physics-Informed Neural Networks and Neural Operators for Parametric PDEs", file: "Physics-Informed Neural Networks and Neural Operators for Parametric PDEs.pdf" },
       { title: "Principled approaches for extending neural architectures to function spaces for operator learning", file: "Principled approaches for extending neural architectures to function spaces for operator learning.pdf" }
     ];
-
     document.getElementById("count").textContent = "\u5171 " + papers.length + " \u7bc7\u6587\u732e";
-
-    const list = document.getElementById("paper-list");
+    var list = document.getElementById("paper-list");
     papers.forEach(function(p, i) {
       var a = document.createElement("a");
       a.className = "paper";
       a.href = encodeURI(p.file);
       a.target = "_blank";
       a.rel = "noopener";
-      a.innerHTML =
-        '<span class="num">' + (i + 1) + '</span>' +
-        '<div class="info">' +
-          '<div class="title">' + p.title + '</div>' +
-          '<div class="meta">PDF \u00b7 \u70b9\u51fb\u5728\u7ebf\u9605\u8bfb</div>' +
-        '</div>' +
-        '<span class="action">\u9605\u8bfb \u2192</span>';
+      a.innerHTML = '<span class="num">' + (i + 1) + '</span><div class="info"><div class="title">' + p.title + '</div><div class="meta">PDF \u00b7 \u70b9\u51fb\u5728\u7ebf\u9605\u8bfb</div></div><span class="action">\u9605\u8bfb \u2192</span>';
       list.appendChild(a);
     });
   </script>
